@@ -5,7 +5,7 @@ import Layout from '../components/common/Layout'
 import SEO from '../components/common/seo'
 
 const SecondPage = () => (
-    <Layout location={window.location}>
+    <Layout>
         <SEO title="Page two" />
         <h1>Hi from the second page</h1>
         <p>Welcome to page 2</p>
