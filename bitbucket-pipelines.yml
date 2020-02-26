@@ -3,6 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
+<<<<<<< HEAD
 image: node:10.15.3
 
 pipelines:
@@ -13,3 +14,44 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm test
+=======
+image: node
+
+pipelines:
+    branches:
+        develop:
+            - step: 
+                name: Test (Continuous Integration on Develop's branche) 
+                caches:
+                    - node
+                script:
+                    - npm install
+                    - npm test
+                    
+            - step:
+                name: Build (Develop's branche)
+                caches:
+                    - node
+                script: # Modify the commands below to build your repository.
+                    - npm install
+                    - npm run build
+                artifacts:
+                    - public/**
+
+            - step:
+                name: Deploy to Firebase (Production)
+                deplotment: production
+                script:
+                    - pipe: atlassian/firebase-deploy:0.3.6
+                        variables:
+                            FIREBASE_TOKEN: $FIREBASE_TOKEN
+                            PROJECT_ID: 'myAwesomeProject'
+                            MESSAGE: 'Deploying myAwesomeProject'
+                            EXTRA_ARGS: '--only functions'
+                            DEBUG: 'true'
+
+                            
+                
+                            
+            
+>>>>>>> b51cb6c80701747c3fe043ab8450457b85c7c9b9
