@@ -31,4 +31,4 @@ pipelines:
                         variables:
                             FIREBASE_TOKEN: $FIREBASE_TOKEN
                             PROJECT_ID: $PROJECT_ID
-                            MESSAGE: 'Deploying Logigos Landing Page'
+                            MESSAGE: 'Automate deploying logigos-landing-page by bitbucket-pipeline'
