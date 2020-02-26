@@ -32,5 +32,3 @@ pipelines:
                             FIREBASE_TOKEN: $FIREBASE_TOKEN
                             PROJECT_ID: $PROJECT_ID
                             MESSAGE: 'Deploying Logigos Landing Page'
-                            EXTRA_ARGS: '--only functions'
-                            DEBUG: 'true'
