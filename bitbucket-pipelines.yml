@@ -2,6 +2,15 @@ image: node:10.15.0
 
 pipelines:
     branches:
+        develop:
+            - step:
+                  name: Automate Testing (develop-branch)
+                  caches:
+                      - node
+                  script:
+                      - npm install
+                      - npm test
+
         master:
             - step:
                   name: Test and Build (Continuous Integration on Master-branch)
@@ -22,4 +31,6 @@ pipelines:
                         variables:
                             FIREBASE_TOKEN: $FIREBASE_TOKEN
                             PROJECT_ID: $PROJECT_ID
-                            MESSAGE: 'Automate deploying by bitbucket-pipeline'
+                            MESSAGE: 'Deploying Logigos Landing Page'
+                            EXTRA_ARGS: '--only functions'
+                            DEBUG: 'true'
