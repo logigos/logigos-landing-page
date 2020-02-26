@@ -2,7 +2,7 @@ image: node:10.15.0
 
 pipelines:
     branches:
-        develop:
+        master:
             - step:
                   name: Test (Continuous Integration on Develop-branch)
                   caches:
