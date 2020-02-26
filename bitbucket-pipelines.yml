@@ -4,21 +4,16 @@ pipelines:
     branches:
         master:
             - step:
-                  name: Test (Continuous Integration on Develop-branch)
+                  name: Test and Build (Continuous Integration on Master-branch)
                   caches:
                       - node
                   script:
                       - npm install
                       - npm test
-            - step:
-                  name: Build (Develop-branch)
-                  caches:
-                      - node
-                  script:
-                      - npm install
                       - npm run build
                   artifacts:
                       - public/**
+
             - step:
                   name: Deploy to Firebase (Production)
                   deployment: production
@@ -26,7 +21,7 @@ pipelines:
                       - pipe: atlassian/firebase-deploy:0.3.6
                         variables:
                             FIREBASE_TOKEN: $FIREBASE_TOKEN
-                            PROJECT_ID: 'myAwesomeProject'
-                            MESSAGE: 'Deploying myAwesomeProject'
+                            PROJECT_ID: $PROJECT_ID
+                            MESSAGE: 'Deploying Logigos Landing Page'
                             EXTRA_ARGS: '--only functions'
                             DEBUG: 'true'
