@@ -6,7 +6,6 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-preact`,
-        `gatsby-plugin-offline`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-react-helmet`,
         {
