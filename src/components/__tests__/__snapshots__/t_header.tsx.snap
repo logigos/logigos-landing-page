@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div
+  className="sc-AxjAm sc-AxiKw hRroIc"
+>
+  <div
+    className="sc-AxjAm sc-AxirZ sc-AxhCb hmXysT"
+  >
+    <h1
+      className="sc-AxhUy fsltVK"
+    >
+      Logigos
+    </h1>
+    <p
+      className="sc-AxgMl gAUOWM"
+    >
+      ค้นหารถบรรทุก งานขนส่งสินค้า
+      <br />
+       และจัดการระบบขนส่งอย่างมีคุณภาพ
+    </p>
+  </div>
+</div>
+`;
