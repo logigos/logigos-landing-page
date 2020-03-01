@@ -1,15 +1,46 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "esnext",
-    "jsx": "preserve",
-    "lib": ["dom", "esnext"],
-    "strict": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "noUnusedLocals": false,
-    "allowJs": true
-  },
-  "exclude": ["node_modules", "public", ".cache"]
+    "compilerOptions": {
+        "target": "esnext",
+        "lib": ["dom", "es2017"],
+        "sourceMap": true,
+        "jsx": "react",
+        "noUnusedLocals": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "declaration": true,
+        "declarationMap": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "typeRoots": ["./node_modules/@types"],
+        "types": ["node", "jest"],
+        "esModuleInterop": true,
+        "noEmit": false,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node"
+    },
+    "exclude": ["node_modules", "public", ".cache"],
+    "include": ["./src/**/*"]
 }
+
+// {
+//     "compilerOptions": {
+//         "target": "esnext",
+//         "module": "commonjs",
+//         "lib": ["dom", "es2017"],
+//         "allowJs": true,
+//         // "checkJs": true,
+//         "jsx": "react",
+//         "strict": true,
+//         "esModuleInterop": true,
+//         "experimentalDecorators": true,
+//         "emitDecoratorMetadata": true,
+//         "noEmit": true,
+//         "skipLibCheck": true,
+//         "moduleResolution": "node"
+//     },
+//     "exclude": ["node_modules", "public", ".cache", "src/**/*.ttf"],
+//     "include": ["./src/**/*"]
+// }
