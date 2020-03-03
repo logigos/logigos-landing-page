@@ -19,7 +19,7 @@ pipelines:
                   script:
                       - npm install
                       - npm test
-                      - npm run build
+                      - gatsby build
                   artifacts:
                       - public/**
 
