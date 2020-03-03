@@ -17,6 +17,7 @@ pipelines:
                   caches:
                       - node
                   script:
+                      - npm install -g gatsby-cli
                       - npm install
                       - npm test
                       - gatsby build
