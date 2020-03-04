@@ -20,7 +20,9 @@ pipelines:
                       - npm install -g gatsby-cli
                       - npm install
                       - npm test
+                      - (umask  077 ; echo $ENV_PROD | base64 -D > .env.production)
                       - gatsby build
+                      - rm -rf .env.production
                   artifacts:
                       - public/**
 
