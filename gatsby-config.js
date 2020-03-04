@@ -1,3 +1,9 @@
+// import 'firebase/app'
+
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
         title: `Logigos ค้นหารถขนส่งและสินค้าขนส่ง ได้ตรงความต้องการ`,
@@ -45,7 +51,6 @@ module.exports = {
                 },
             },
         },
-
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
