@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "@LogigosDev",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "firebase": "^7.9.3",
     "gatsby": "^2.19.19",
     "gatsby-image": "^2.2.39",
@@ -14,6 +15,7 @@
     "gatsby-plugin-preact": "^3.1.26",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-styled-components": "^3.1.19",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.46",

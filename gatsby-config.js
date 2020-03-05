@@ -11,6 +11,7 @@ module.exports = {
         author: `@LogigosDev`,
     },
     plugins: [
+        `gatsby-plugin-styled-components`,
         `gatsby-plugin-preact`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-react-helmet`,
