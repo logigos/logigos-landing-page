@@ -9,14 +9,14 @@ import React, { useEffect } from 'react'
 // import { useStaticQuery, graphql } from 'gatsby'
 import GlobalStyles from './GlobalStyles'
 import styled from 'styled-components'
-import { ContainerFlexCol } from './Container'
+import { Conflexcol } from './Container'
 import firebase from 'gatsby-plugin-firebase'
 
 interface Props {
     children: React.ReactNode
 }
 
-const LayoutContainer = styled(ContainerFlexCol)`
+const LayoutContainer = styled(Conflexcol)`
     width: 100%;
     margin: 0 auto;
 `

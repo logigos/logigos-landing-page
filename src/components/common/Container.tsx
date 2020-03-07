@@ -1,10 +1,14 @@
 // import React from 'react'
 import styled from 'styled-components'
 
-export const ContainerFlexRow = styled.div`
+export const Conflexrow = styled.div`
     display: flex;
 `
 
-export const ContainerFlexCol = styled(ContainerFlexRow)`
+export const Headerflexrow = styled.header`
+    display: flex;
+`
+
+export const Conflexcol = styled(Conflexrow)`
     flex-direction: column;
 `

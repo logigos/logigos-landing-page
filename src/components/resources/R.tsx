@@ -1,5 +1,7 @@
-import { colors } from './Colors'
+import colors from './Colors'
 
-export const R: Object = {
+const R = {
     colors,
 }
+
+export default R

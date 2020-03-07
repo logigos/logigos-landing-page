@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Header from '../common/Header'
+import Header from '../container/Header'
 
 describe('Header', () => {
     it('renders correctly', () => {

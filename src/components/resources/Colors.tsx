@@ -1,4 +1,4 @@
-export const colors: Object = {
+const colors = {
     base_red: '#ce8d80',
     base_blue: '#545c73',
     black_80: 'rgba(0, 0, 0, 0.8)',
@@ -10,3 +10,5 @@ export const colors: Object = {
     base_red_bold: '#c67b6c',
     base_blue_bold: '#495064',
 }
+
+export default colors
