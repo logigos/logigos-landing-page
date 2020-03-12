@@ -2,7 +2,9 @@ import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 
 const ButtonRoot = styled.button<Props>`
-    /* appearance: none;  browser not support yet */
+    appearance: none;
+    /* browser not support yet */
+
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -10,7 +12,7 @@ const ButtonRoot = styled.button<Props>`
     line-height: 1.8;
     border-radius: 0.8rem;
     border-width: 0;
-    margin: ${props => props.margin || '0 2.2rem 0 2.2rem'};
+    margin: ${props => props.margin || '1rem 2.2rem'};
     font-size: ${props => props.font_size || '3.6rem'};
     background: ${props => props.bg || 'white'};
     color: ${props => props.color || 'white'};
@@ -20,6 +22,11 @@ const ButtonRoot = styled.button<Props>`
     &:hover {
         background: ${props => props.hbg || 'white'};
         color: ${props => props.hcolor || 'white'};
+    }
+
+    &:active {
+        background: ${props => props.abg || 'white'};
+        color: ${props => props.acolor || 'white'};
     }
 `
 
@@ -33,6 +40,8 @@ interface Props {
     margin?: string
     hcolor?: string
     hbg?: string
+    acolor?: string
+    abg?: string
 }
 
 const Button: FC<Props> = ({ children, ...props }) => {

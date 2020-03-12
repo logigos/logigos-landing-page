@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Button from '../common/Button'
 import { Headerflexrow, Conflexcol } from '../common/Container'
 import gradient_wave from '../../images/header-section/image/gradient-wave.svg'
@@ -13,6 +14,11 @@ const Root = styled(Headerflexrow)`
     background-size: contain;
     background-repeat: no-repeat;
     justify-content: center;
+
+    ${media.lessThan('large')`
+        background-position: top center;
+        background-size: auto 600px;
+    `}
 `
 
 const ContainerContent = styled(Conflexcol)`
@@ -25,7 +31,7 @@ const Logigos = styled.h1`
     font-size: 64px;
     font-weight: 800;
     line-height: 7.8rem;
-    margin-bottom: 3.2rem;
+    margin: 0 0 3.2rem 0;
     text-align: center;
 `
 
@@ -43,6 +49,11 @@ const ContainerButtons = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 4.8rem;
+
+    ${media.lessThan('medium')`
+        flex-direction: column;
+        align-items: center;
+    `};
 `
 
 const Header: FunctionComponent = () => {
@@ -56,10 +67,18 @@ const Header: FunctionComponent = () => {
                     และจัดการระบบขนส่งอย่างมีคุณภาพ
                 </Detail>
                 <ContainerButtons>
-                    <Button color={R.colors.base_blue} hbg={R.colors.base_blue}>
+                    <Button
+                        color={R.colors.base_blue}
+                        hbg={R.colors.base_blue}
+                        abg={R.colors.base_blue_bold}
+                    >
                         ค้นหารถบรรทุก
                     </Button>
-                    <Button color={R.colors.base_red} hbg={R.colors.base_red}>
+                    <Button
+                        color={R.colors.base_red}
+                        hbg={R.colors.base_red}
+                        abg={R.colors.base_red_bold}
+                    >
                         ค้นหางานขนส่ง
                     </Button>
                 </ContainerButtons>
