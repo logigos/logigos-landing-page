@@ -1,8 +1,8 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, Props } from 'react';
 import styled from 'styled-components';
 import R from '../resources/R';
 
-const ButtonRoot = styled.button<MyProps>`
+const ButtonRoot = styled.button<Props>`
     display: flex;
     background: ${props => props.bg_color};
     color: ${props => props.color};
@@ -10,7 +10,7 @@ const ButtonRoot = styled.button<MyProps>`
     height: ${props => props.height};
 `;
 
-interface MyProps {
+interface Props {
     children?: ReactNode;
     width?: string;
     height?: string;
@@ -18,14 +18,13 @@ interface MyProps {
     bg_color?: string;
 }
 
-const defaultProps: MyProps = {
-    color: 'white',
-    bg_color: R.colors.base_red,
-    width: '27.8ren',
-    height: '6.6rem',
-};
-
-const Button: FC<MyProps> = ({ color, bg_color, width, height, children }) => {
+const Button: FC<Props> = ({
+    color = 'white',
+    bg_color = R.colors.base_red,
+    width = '27.8ren',
+    height = '6.6rem',
+    children,
+}) => {
     return (
         <ButtonRoot
             bg_color={bg_color}
@@ -38,5 +37,4 @@ const Button: FC<MyProps> = ({ color, bg_color, width, height, children }) => {
     );
 };
 
-Button.defaultProps = defaultProps;
 export default Button;

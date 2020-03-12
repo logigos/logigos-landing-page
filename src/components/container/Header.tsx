@@ -54,7 +54,7 @@ const Header: FunctionComponent = () => {
                     และจัดการระบบขนส่งอย่างมีคุณภาพ
                 </Detail>
                 <ContainerButtons>
-                    <Button>
+                    <Button color="#000">
                         <p>ค้นหารถบรรทุก</p>
                     </Button>
                     {/* <Button>ค้นหางานขนส่ง</Button> */}
