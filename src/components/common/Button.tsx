@@ -1,40 +1,42 @@
-import React, { FC, ReactNode, Props } from 'react';
-import styled from 'styled-components';
-import R from '../resources/R';
+import React, { FC, ReactNode } from 'react'
+import styled from 'styled-components'
 
 const ButtonRoot = styled.button<Props>`
+    /* appearance: none;  browser not support yet */
+    cursor: pointer;
     display: flex;
-    background: ${props => props.bg_color};
-    color: ${props => props.color};
-    width: ${props => props.width};
-    height: ${props => props.height};
-`;
+    justify-content: center;
+    font-family: 'Mitr';
+    line-height: 1.8;
+    border-radius: 0.8rem;
+    border-width: 0;
+    margin: ${props => props.margin || '0 2.2rem 0 2.2rem'};
+    font-size: ${props => props.font_size || '3.6rem'};
+    background: ${props => props.bg || 'white'};
+    color: ${props => props.color || 'white'};
+    width: ${props => props.width || '27.8rem'};
+    height: ${props => props.height || '6.6rem'};
+
+    &:hover {
+        background: ${props => props.hbg || 'white'};
+        color: ${props => props.hcolor || 'white'};
+    }
+`
 
 interface Props {
-    children?: ReactNode;
-    width?: string;
-    height?: string;
-    color?: string;
-    bg_color?: string;
+    children?: ReactNode
+    width?: string
+    height?: string
+    color?: string
+    bg?: string
+    font_size?: string
+    margin?: string
+    hcolor?: string
+    hbg?: string
 }
 
-const Button: FC<Props> = ({
-    color = 'white',
-    bg_color = R.colors.base_red,
-    width = '27.8ren',
-    height = '6.6rem',
-    children,
-}) => {
-    return (
-        <ButtonRoot
-            bg_color={bg_color}
-            color={color}
-            width={width}
-            height={height}
-        >
-            {children}
-        </ButtonRoot>
-    );
-};
+const Button: FC<Props> = ({ children, ...props }) => {
+    return <ButtonRoot {...props}>{children}</ButtonRoot>
+}
 
-export default Button;
+export default Button
