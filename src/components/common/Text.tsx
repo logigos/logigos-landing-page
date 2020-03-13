@@ -8,4 +8,5 @@ export const TextSection = styled.h1`
     line-height: 1.8;
     letter-spacing: normal;
     color: ${R.colors.black_l_20};
+    margin: 0;
 `

@@ -5,6 +5,9 @@ import { Conflexcol } from './Container'
 
 const Layouts = styled(Conflexcol)`
     width: 100%;
+    min-width: 70.2rem;
+    /* max-width: 90rem; */
+    margin-top: 5.2rem;
 `
 
 const ContainerFeature = styled.div`
@@ -13,12 +16,12 @@ const ContainerFeature = styled.div`
     justify-content: center;
 `
 
-export interface Services {
+export interface ServicesType {
     featureI?: FeatureType
     featureII?: FeatureType
     featureIII?: FeatureType
 }
-const ServiceContentLayout: FC<Services> = props => {
+const ServiceContentLayout: FC<ServicesType> = props => {
     let { featureI } = props
     let { featureII } = props
     let { featureIII } = props

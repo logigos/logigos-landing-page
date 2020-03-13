@@ -10,7 +10,12 @@ const Container = styled(ConflexcolCenterH)`
 const IconFeature = styled.img`
     width: ${props => props.width};
     height: ${props => props.height};
+    margin: 0 auto;
     object-fit: contain;
+    filter: drop-shadow(
+        9px 9px 12px 0 hsla(0, 0%, 90%, 0.5),
+        -9px -9px 12px 0 hsla(0, 0%, 99%, 0.5)
+    );
 `
 
 const NameFeature = styled.p`
@@ -19,15 +24,18 @@ const NameFeature = styled.p`
     line-height: 1.8;
     letter-spacing: normal;
     color: ${R.colors.black_l_20};
+    margin: 1rem auto;
 `
 
 const DetailFeature = styled.p`
+    width: 27.8rem;
     font-family: 'Mitr';
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.8;
     color: ${R.colors.black_l_40};
     text-align: center;
+    margin: 0 auto 3.2rem auto;
 `
 
 export interface FeatureType {
