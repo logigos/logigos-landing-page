@@ -9,22 +9,20 @@ import R from '../resources/R'
 const Root = styled.header`
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-image: url(${bg_image}), url(${gradient_wave});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center;
     justify-content: center;
-
-    ${media.lessThan('large')`
-        background-position: top center;
-        background-size: auto 600px;
-    `}
+    align-items: center;
 `
 
 const ContainerContent = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 12rem;
+
+    /* margin-top: 12rem; */
 `
 
 const Logigos = styled.h1`
