@@ -1,7 +1,7 @@
 <svg width="503" height="552" viewBox="0 0 503 552" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
 <ellipse cx="73" cy="476.401" rx="172" ry="43.4909" fill="#F5E8E5"/>
-<rect x="144" y="388.919" width="72" height="85.982" rx="9" fill="#3F3F3F"/>
+<rect x="144" y="388.919" width="72" height="85.982" rx="9" fill="#666666"/>
 <mask id="path-4-inside-1" fill="white">
 <rect x="-132" width="367" height="405.915" rx="8"/>
 </mask>
