@@ -25,5 +25,5 @@ export const ConflexcolCenterH = styled(Conflexcol)`
 
 export const ContainerSection = styled(Conflexcol)`
     align-items: center;
-    /* margin-top: 8.8rem; */
+    margin-top: 8.8rem;
 `

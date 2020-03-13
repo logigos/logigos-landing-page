@@ -21,8 +21,6 @@ const Root = styled.header`
 const ContainerContent = styled.div`
     display: flex;
     flex-direction: column;
-
-    /* margin-top: 12rem; */
 `
 
 const Logigos = styled.h1`
@@ -69,16 +67,16 @@ const Header: FunctionComponent = () => {
                 <ContainerButtons>
                     <Button
                         color={R.colors.base_blue}
-                        hbg={R.colors.base_blue}
-                        abg={R.colors.base_blue_bold}
+                        hbg={R.colors.base_blue_l_50}
+                        abg={R.colors.base_blue_l_35}
                         hcolor="white"
                     >
                         ค้นหารถบรรทุก
                     </Button>
                     <Button
                         color={R.colors.base_red}
-                        hbg={R.colors.base_red}
-                        abg={R.colors.base_red_bold}
+                        hbg={R.colors.base_red_l_75}
+                        abg={R.colors.base_red_l_60}
                         hcolor="white"
                     >
                         ค้นหางานขนส่ง

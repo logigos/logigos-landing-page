@@ -18,8 +18,8 @@ const Navbar = () => {
         <NavRoot>
             <Button
                 bg="transparent"
-                hbg={R.colors.white_75}
-                abg={R.colors.black_10}
+                hbg={R.colors.black_l_60}
+                abg={R.colors.black_l_90}
                 height="4.7rem"
                 width="15rem"
                 font_size="2.4rem"
@@ -30,13 +30,13 @@ const Navbar = () => {
             <Button
                 bg="transparent"
                 hbg="white"
-                abg={R.colors.white_92}
+                abg={R.colors.black_l_90}
                 height="4.7rem"
                 width="18rem"
                 font_size="2.4rem"
                 border={`solid .3rem white`}
-                aborder={`solid .3rem ${R.colors.white_92}`}
-                hcolor={R.colors.black_60}
+                aborder={`solid .3rem ${R.colors.black_l_90}`}
+                hcolor={R.colors.black_l_40}
                 margin="auto 1.2rem"
             >
                 สมัครสมาชิก

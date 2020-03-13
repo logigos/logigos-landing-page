@@ -13,12 +13,12 @@ const IconFeature = styled.img`
     object-fit: contain;
 `
 
-const NameFeature = styled.h1`
+const NameFeature = styled.p`
     font-family: 'Mitr';
     font-size: 2.4rem;
     line-height: 1.8;
     letter-spacing: normal;
-    color: ${R.colors.black_80};
+    color: ${R.colors.black_l_20};
 `
 
 const DetailFeature = styled.p`
@@ -26,7 +26,7 @@ const DetailFeature = styled.p`
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.8;
-    color: ${R.colors.black_80};
+    color: ${R.colors.black_l_40};
     text-align: center;
 `
 

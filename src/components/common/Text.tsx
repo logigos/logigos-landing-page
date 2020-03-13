@@ -7,5 +7,5 @@ export const TextSection = styled.h1`
     font-weight: 500;
     line-height: 1.8;
     letter-spacing: normal;
-    color: ${R.colors.black_60};
+    color: ${R.colors.black_l_20};
 `
