@@ -11,7 +11,7 @@ import GlobalStyles from './GlobalStyles'
 import styled from 'styled-components'
 import { Conflexcol } from './Container'
 import firebase from 'gatsby-plugin-firebase'
-
+import Navbar from './Navbar'
 interface Props {
     children: React.ReactNode
 }
@@ -28,6 +28,7 @@ const Layout = ({ children }: Props) => {
     return (
         <LayoutContainer>
             <GlobalStyles />
+            <Navbar />
             {children}
         </LayoutContainer>
     )

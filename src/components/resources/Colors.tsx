@@ -11,6 +11,8 @@ const colors = {
     black_10: 'rgba(0, 0, 0, 0.1)',
     base_red_bold: '#c67b6c',
     base_blue_bold: '#495064',
+    white_75: 'hsla(0, 0%, 100%, 0.75)',
+    white_92: 'hsl(0, 0%, 92%)',
 }
 
 export default colors

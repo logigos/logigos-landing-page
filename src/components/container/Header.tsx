@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '../common/Button'
-import { Headerflexrow, Conflexcol } from '../common/Container'
 import gradient_wave from '../../images/header-section/image/gradient-wave.svg'
 import bg_image from '../../images/header-section/image/bg-image.png'
 import R from '../resources/R'
 
-const Root = styled(Headerflexrow)`
+const Root = styled.header`
+    display: flex;
     width: 100%;
     height: 100vh;
     background-image: url(${bg_image}), url(${gradient_wave});
@@ -21,7 +21,9 @@ const Root = styled(Headerflexrow)`
     `}
 `
 
-const ContainerContent = styled(Conflexcol)`
+const ContainerContent = styled.div`
+    display: flex;
+    flex-direction: column;
     margin-top: 12rem;
 `
 
@@ -71,6 +73,7 @@ const Header: FunctionComponent = () => {
                         color={R.colors.base_blue}
                         hbg={R.colors.base_blue}
                         abg={R.colors.base_blue_bold}
+                        hcolor="white"
                     >
                         ค้นหารถบรรทุก
                     </Button>
@@ -78,6 +81,7 @@ const Header: FunctionComponent = () => {
                         color={R.colors.base_red}
                         hbg={R.colors.base_red}
                         abg={R.colors.base_red_bold}
+                        hcolor="white"
                     >
                         ค้นหางานขนส่ง
                     </Button>
