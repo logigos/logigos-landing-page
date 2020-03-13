@@ -21,7 +21,6 @@ const Navbar = () => {
                 hbg={R.colors.white_75}
                 abg={R.colors.black_10}
                 height="4.7rem"
-                border_radius=".5rem"
                 width="15rem"
                 font_size="2.4rem"
                 margin="auto 1.2rem"
@@ -33,7 +32,6 @@ const Navbar = () => {
                 hbg="white"
                 abg={R.colors.white_92}
                 height="4.7rem"
-                border_radius=".8rem"
                 width="18rem"
                 font_size="2.4rem"
                 border={`solid .3rem white`}
