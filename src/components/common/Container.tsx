@@ -11,6 +11,10 @@ export const ConflexrowCenter = styled.div`
     align-items: center;
 `
 
+export const ConflexcolCenter = styled(ConflexrowCenter)`
+    flex-direction: column;
+`
+
 export const Headerflexrow = styled.header`
     display: flex;
 `
