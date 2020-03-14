@@ -36,7 +36,7 @@ const Logigos = styled.h1`
 const Detail = styled.p`
     color: white;
     font-family: 'Mitr';
-    font-weight: 400;
+    font-weight: 300;
     font-size: 32px;
     line-height: 1.8;
     text-align: center;
