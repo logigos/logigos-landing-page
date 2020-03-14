@@ -8,12 +8,19 @@ const Container = styled.div<{ reverse?: boolean }>`
     flex-direction: ${props => (props.reverse ? 'row-reverse' : 'row')};
     margin-bottom: 4.9rem;
     justify-content: space-between;
+    position: relative;
 `
 
 const ImageSideService = styled.img<ImageType>`
+    position: absolute;
+    right: ${props => (props.reverse ? 'auto' : '0')};
+    left: ${props => (props.reverse ? '0' : 'auto')};
+    top: ${props => (props.reverse ? '0' : '5.7rem')};
+    margin: ${props => (props.style ? props.style.margin : '0')};
     width: ${props => props.width};
     height: ${props => props.height};
-    margin: ${props => (props.style ? props.style.margin : '0')};
+    max-width: 100%;
+    height: auto;
 `
 
 export interface ImagestyleType {
@@ -28,6 +35,7 @@ export interface ImageType {
     src: string
     width: string
     height: string
+    reverse?: boolean
     style?: ImagestyleType
 }
 interface Props {
@@ -44,7 +52,11 @@ const ServiceLayouts: FC<Props> = props => {
     return (
         <Container reverse={props.reverse} {...style}>
             <Content {...services} />
-            <ImageSideService src={image.src} {...image} />
+            <ImageSideService
+                src={image.src}
+                reverse={props.reverse}
+                {...image}
+            />
         </Container>
     )
 }

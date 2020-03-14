@@ -4,10 +4,9 @@ import Feature, { FeatureType } from './ServiceFeature'
 import { Conflexcol } from './Container'
 
 const Layouts = styled(Conflexcol)`
-    width: 100%;
-    min-width: 70.2rem;
-    /* max-width: 90rem; */
     margin-top: 5.2rem;
+    width: 85%;
+    z-index: 1;
 `
 
 const ContainerFeature = styled.div`

@@ -73,18 +73,18 @@ const image_sender: ImageType = {
     src: img_seder,
     width: '34.4rem',
     height: '42.89rem',
-    style: {
-        margin: 'auto 5.7rem auto 0',
-    },
+    // style: {
+    //     margin: 'auto 5.7rem auto 13.2rem',
+    // },
 }
 
 const image_driver: ImageType = {
     src: img_driver,
     width: '50.3rem',
     height: '55.2rem',
-    style: {
-        margin: '0',
-    },
+    // style: {
+    //     margin: '0',
+    // },
 }
 
 const ServicesSection = () => {
