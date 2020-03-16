@@ -36,6 +36,6 @@ export const Alert = keyframes`
 
 export const ArrowDowm = keyframes`
   0%, 100%{margin-top: .0rem}
-  50% {margin-top: 1.5rem}
+  50% {margin-top: 2rem}
  
 `

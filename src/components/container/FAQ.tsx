@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import R from '../resources/R'
 import bg_faq_illus from '../../images/faq-section/image/faq-illus.svg'
 import IconArrowDownRed from '../../images/faq-section/icon/arrow-down-red.svg'
 import { ArrowDowm } from '../utility/Keyframe'
+import { TextSection } from '../common/Text'
+import FAQItem from '../common/FaqsItem'
 
 const IconArrowDownRedCustom = styled(IconArrowDownRed)`
     margin: 0 auto;
-    animation: ${ArrowDowm} 1.9s ease-in-out infinite;
+    animation: ${ArrowDowm} 1.5s ease-in-out infinite;
 `
-
+const TextSectionCustom = styled(TextSection)`
+    margin-bottom: 4.1rem;
+    height: 7.5rem;
+`
 const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -48,9 +53,90 @@ const ContainerFAQs = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding: 0 7rem;
 `
 
+interface FAQType {
+    Q: string
+    A: string
+}
+interface FAQsType {
+    faqs: FAQType[]
+}
+
+const FAQs: FAQsType = {
+    faqs: [
+        {
+            Q: 'อยากกินบอนชอนต้องทำอย่างไร ?',
+            A: 'ต้องมีตัง',
+        },
+        {
+            Q: 'เมื่อไหร่จะได้กินบาบีก้อน ?',
+            A:
+                '- Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla',
+        },
+        {
+            Q: 'ถ้ากินชาบูวันนี้ จะได้กินเต้าหู้ชีสหรือไม่ ?',
+            A:
+                '- Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla',
+        },
+        {
+            Q: 'ระหว่างหมูสามชั้น เบคอนและคอหมู อะไรดีกว่ากัน ?',
+            A:
+                '- Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla',
+        },
+        {
+            Q: 'เมื่อไหร่บอนชอนจะมาส่ง ?',
+            A:
+                '- Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla',
+        },
+    ],
+}
+
+// interface ExpandsType {
+//     qI: boolean
+//     qII: boolean
+//     qIII: boolean
+//     qIV: boolean
+//     qV: boolean
+// }
+
+interface Props {
+    [index: string]: boolean
+}
+
 const FAQ = () => {
+    // const [expand, setExpand] = useState<Array<boolean>>([false,false,false,false,false])
+    const [expand, setExpand] = useState<Props>({
+        '0': false,
+        '1': false,
+        '2': false,
+        '3': false,
+        '4': false,
+    })
+
+    const handleOnClick = async (index: string) => {
+        let obj: Props = {
+            '0': false,
+            '1': false,
+            '2': false,
+            '3': false,
+            '4': false,
+        }
+
+        //  Object.keys(expand).forEach((key: string) => {
+        //     index === key ? (obj[key] = true) : (obj[key] = !expand[key])
+        //     // console.log(Object.keys(expand), index, key, expand)
+        // })
+
+        setExpand({ ...obj, [index]: !expand[index] })
+
+        // setExpand({
+        //     ...expand,
+        //     [index.toString()]: !expand[index.toString()],
+        // })
+    }
+
     return (
         <Container>
             <ContainerContent>
@@ -62,7 +148,21 @@ const FAQ = () => {
                 </FAQThanks>
                 <IconArrowDownRedCustom />
             </ContainerContent>
-            <ContainerFAQs />
+            <ContainerFAQs>
+                <TextSectionCustom>คำถามที่พบบ่อย</TextSectionCustom>
+                {FAQs.faqs.map((faq, index) => {
+                    return (
+                        <FAQItem
+                            key={index}
+                            expand={expand[index.toString()]}
+                            handleOnClick={() =>
+                                handleOnClick(index.toString())
+                            }
+                            {...faq}
+                        />
+                    )
+                })}
+            </ContainerFAQs>
         </Container>
     )
 }
