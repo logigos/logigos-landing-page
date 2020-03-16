@@ -18,7 +18,7 @@ import bg_left from '../../images/services-section/image/red-triangle.svg'
 
 const Container = styled(Conflexcol)`
     width: 100%;
-    height: auto;
+    height: 129.2rem;
     background: url(${bg_right}), url(${bg_left});
     background-repeat: no-repeat;
     background-position: top right, 0 43rem;

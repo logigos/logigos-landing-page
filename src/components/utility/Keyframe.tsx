@@ -33,3 +33,9 @@ export const Alert = keyframes`
   90%{top:19px; right: 15px;opacity:1}
   100%{top:0px; right: 15px;opacity:0}
 `
+
+export const ArrowDowm = keyframes`
+  0%, 100%{margin-top: .0rem}
+  50% {margin-top: 1.5rem}
+ 
+`
