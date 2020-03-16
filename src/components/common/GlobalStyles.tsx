@@ -19,6 +19,7 @@ export default createGlobalStyle`
   Extra Bold, Ultra Bold	800
   Black, Heavy	900 
   */
+  
  @font-face {
     font-family: 'Mitr';
     src: url(${Mitr_Light});
