@@ -1,7 +1,8 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { ConflexcolCenter } from './Container'
 import R from '../resources/R'
+// import SVGIcon, { SVGType } from '../utility/SVGIcon'
 
 const Container = styled(ConflexcolCenter)`
     background: transparent;
@@ -45,12 +46,20 @@ export interface StepType {
     image?: string
     name?: string
     detail?: string
+    icon?: ReactNode
 }
 
 const StepFeature: FC<StepType> = props => {
+    // let { icon } = props
     return (
         <Container>
-            <IconStep src={props.image} {...props} />
+            {props.icon ? (
+                props.icon
+            ) : (
+                <IconStep src={props.image} {...props} />
+            )}
+
+            {/* <SVGIcon {...icon} /> */}
             <NameStep>{props.name}</NameStep>
             <DetailStep>{props.detail}</DetailStep>
         </Container>

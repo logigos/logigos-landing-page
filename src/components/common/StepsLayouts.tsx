@@ -1,7 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, Fragment } from 'react'
 import styled from 'styled-components'
 import R from '../resources/R'
 import Step, { StepType } from './StepFeature'
+import SVGIcon from '../utility/SVGIcon'
+import IconArrow from '../../images/step-section/icon/right-arrow.svg'
 
 const Section = styled.div<{ bg?: string }>`
     display: flex;
@@ -13,7 +15,7 @@ const Section = styled.div<{ bg?: string }>`
 const Layout = styled.div`
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
 `
 
 const Container = styled.div`
@@ -40,12 +42,6 @@ const TextHeader = styled.p<{ primary_color: string }>`
     }
 `
 
-const IconNext = styled.img`
-    width: 44.9px;
-    height: 30.2px;
-    background: ${R.colors.base_red};
-`
-
 interface StyleSectionType {
     primary_color: string
     bg?: string
@@ -67,14 +63,14 @@ const StepsLayouts: FC<ContentType> = props => {
                     {props.topic}
                 </TextHeader>
                 <Container>
-                    {steps.map(step => {
+                    {steps.map((step, id) => {
                         return (
-                            <>
+                            <Fragment key={id}>
                                 <Step {...step} />
                                 {step !== steps[steps.length - 1] ? (
-                                    <IconNext />
+                                    <IconArrow />
                                 ) : null}
-                            </>
+                            </Fragment>
                         )
                     })}
                 </Container>

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Button from '../common/Button'
-import gradient_wave from '../../images/header-section/image/gradient-wave.svg'
+import GradientWave from '../../images/header-section/image/gradient-wave.svg'
 import bg_image from '../../images/header-section/image/bg-image.png'
 import R from '../resources/R'
 
@@ -10,7 +10,7 @@ const Root = styled.header`
     display: flex;
     width: 100%;
     height: 90vh;
-    background-image: url(${bg_image}), url(${gradient_wave});
+    background-image: url(${bg_image}), url(${GradientWave});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { ConflexcolCenterH } from './Container'
 import R from '../resources/R'
@@ -35,7 +35,7 @@ const DetailFeature = styled.p`
     line-height: 1.8;
     color: ${R.colors.black_l_40};
     text-align: center;
-    margin: 0 auto 3.2rem auto;
+    margin: 0 auto 1.25rem auto;
 `
 
 export interface FeatureType {
@@ -44,12 +44,17 @@ export interface FeatureType {
     image?: string
     name?: string
     detail?: string
+    icon?: ReactNode
 }
 
 const ServiceFeature: FC<FeatureType> = props => {
     return (
         <Container>
-            <IconFeature src={props.image} {...props} />
+            {props.icon ? (
+                props.icon
+            ) : (
+                <IconFeature src={props.image} {...props} />
+            )}
             <NameFeature>{props.name}</NameFeature>
             <DetailFeature>{props.detail}</DetailFeature>
         </Container>

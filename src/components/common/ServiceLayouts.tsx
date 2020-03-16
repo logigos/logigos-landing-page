@@ -6,7 +6,7 @@ const Container = styled.div<{ reverse?: boolean }>`
     width: 100%;
     display: flex;
     flex-direction: ${props => (props.reverse ? 'row-reverse' : 'row')};
-    margin-bottom: 4.9rem;
+    margin-bottom: 3.65rem;
     justify-content: space-between;
     position: relative;
 `
