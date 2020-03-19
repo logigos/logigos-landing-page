@@ -1,12 +1,32 @@
 import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 import R from '../resources/R'
-import IconArrow from '../../images/faq-section/icon/arrow-down-blue.svg'
+import IconArrowBlue from '../../images/faq-section/icon/arrow-down-blue.svg'
+import IconArrowRed from '../../images/faq-section/icon/arrow-up.svg'
+import { SpinForward, SpinBackword } from '../utility/Keyframe'
 
-const IconArrowCustom = styled(IconArrow)`
+const IconArrowRedCustom = styled(IconArrowRed)`
     position: absolute;
-    top: 2.8rem;
     right: 3.88rem;
+    bottom: 2.3rem;
+    animation: ${props =>
+        props.expand === 'true'
+            ? css`
+                  ${SpinForward} 450ms ease-in-out
+              `
+            : null};
+`
+
+const IconArrowBlueCustom = styled(IconArrowBlue)`
+    position: absolute;
+    right: 3.88rem;
+    top: 2.8rem;
+    animation: ${props =>
+        props.expand === 'false'
+            ? css`
+                  ${SpinBackword} 450ms ease-in-out
+              `
+            : null};
 `
 
 const QText = styled.p`
@@ -36,7 +56,11 @@ export interface FAQType {
 const FaqsItem: FC<FAQType> = ({ Q, A, expand, handleOnClick }) => {
     return (
         <ContainerItem onClick={() => handleOnClick()} isExpand={expand}>
-            <IconArrowCustom />
+            {expand ? (
+                <IconArrowRedCustom expand={expand.toString()} />
+            ) : (
+                <IconArrowBlueCustom expand={expand.toString()} />
+            )}
             <QText>{Q}</QText>
             <AText>{A}</AText>
         </ContainerItem>
@@ -54,16 +78,15 @@ const ContainerItem = styled.div<{ isExpand: boolean }>`
     background: ${R.colors.base_blue_l_96};
     padding-left: 3.6rem;
     cursor: pointer;
+    transition: max-height 300ms ease-out;
 
     ${props =>
         props.isExpand
             ? css`
                   max-height: 19.2rem;
-                  transition: max-height 300ms ease-out;
               `
             : css`
                   max-height: 7rem;
-                  transition: max-height 300ms ease-out;
               `}
 `
 

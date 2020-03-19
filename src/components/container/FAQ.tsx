@@ -128,7 +128,7 @@ const FAQ = () => {
     return (
         <Container
             onIntersect={() => setExpand(initialExpand)}
-            options={{ threshold: [1] }}
+            options={{ threshold: [0.75] }}
         >
             <ContainerContent>
                 <FAQTopic>มีข้อสงสัยหรือพบปัญหา</FAQTopic>

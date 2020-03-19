@@ -39,3 +39,24 @@ export const ArrowDowm = keyframes`
   50% {margin-top: 2rem}
  
 `
+export const SpinForward = keyframes`
+  from {
+    transform: rotate(-180deg);
+    }
+  to {
+    transform: rotate(0deg);
+  }
+`
+export const SpinBackword = keyframes`
+  from {
+    transform: rotate(180deg);
+    top: auto;
+    bottom: 2.3rem;
+    }
+  to{
+    transform: rotate(0deg);
+    top: 2.8rem;
+    bottom: auto;
+  }
+  
+`
