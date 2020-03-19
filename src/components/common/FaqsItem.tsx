@@ -1,4 +1,4 @@
-import React, { FC, useState, FocusEvent } from 'react'
+import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 import R from '../resources/R'
 import IconArrow from '../../images/faq-section/icon/arrow-down-blue.svg'
@@ -34,28 +34,8 @@ export interface FAQType {
 }
 
 const FaqsItem: FC<FAQType> = ({ Q, A, expand, handleOnClick }) => {
-    // const [isExpand, setIsExpand] = useState<boolean>(expand)
-
-    // const handleBlur = (e: FocusEvent<HTMLDivElement | null>) => {
-    //     if (e.relatedTarget) {
-    //         console.log(
-    //             (e.relatedTarget as HTMLDivElement).id,
-    //             e.currentTarget.id
-    //         )
-    //         if ((e.relatedTarget as HTMLDivElement).id === 'FAQItem') {
-    //             setIsExpand(false)
-    //         }
-    //     }
-    // }
-
     return (
-        <ContainerItem
-            tabIndex={0}
-            onClick={() => handleOnClick()}
-            // onBlur={e => handleBlur(e)}
-            isExpand={expand}
-            id="FAQItem"
-        >
+        <ContainerItem onClick={() => handleOnClick()} isExpand={expand}>
             <IconArrowCustom />
             <QText>{Q}</QText>
             <AText>{A}</AText>

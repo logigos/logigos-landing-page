@@ -6,21 +6,25 @@ import IconArrowDownRed from '../../images/faq-section/icon/arrow-down-red.svg'
 import { ArrowDowm } from '../utility/Keyframe'
 import { TextSection } from '../common/Text'
 import FAQItem from '../common/FaqsItem'
+import IntersectionVisible from 'react-intersection-visible'
 
 const IconArrowDownRedCustom = styled(IconArrowDownRed)`
     margin: 0 auto;
     animation: ${ArrowDowm} 1.5s ease-in-out infinite;
 `
+
 const TextSectionCustom = styled(TextSection)`
     margin-bottom: 4.1rem;
     height: 7.5rem;
 `
-const Container = styled.div`
+
+const Container = styled(IntersectionVisible)`
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 7.6rem;
 `
+
 const ContainerContent = styled.div`
     width: 50%;
     max-width: 48.8rem;
@@ -36,7 +40,7 @@ const FAQTopic = styled.p`
     font-family: 'Mitr';
     font-size: 4.8rem;
     color: ${R.colors.black_l_40};
-    margin: 11.6rem auto 0 auto;
+    margin: 11.6rem 0 0 0;
 `
 
 const FAQThanks = styled.p`
@@ -60,6 +64,7 @@ interface FAQType {
     Q: string
     A: string
 }
+
 interface FAQsType {
     faqs: FAQType[]
 }
@@ -106,39 +111,25 @@ interface Props {
 }
 
 const FAQ = () => {
-    // const [expand, setExpand] = useState<Array<boolean>>([false,false,false,false,false])
-    const [expand, setExpand] = useState<Props>({
+    let initialExpand: Props = {
         '0': false,
         '1': false,
         '2': false,
         '3': false,
         '4': false,
-    })
+    }
+    // const [expand, setExpand] = useState<Array<boolean>>([false,false,false,false,false])
+    const [expand, setExpand] = useState<Props>(initialExpand)
 
     const handleOnClick = async (index: string) => {
-        let obj: Props = {
-            '0': false,
-            '1': false,
-            '2': false,
-            '3': false,
-            '4': false,
-        }
-
-        //  Object.keys(expand).forEach((key: string) => {
-        //     index === key ? (obj[key] = true) : (obj[key] = !expand[key])
-        //     // console.log(Object.keys(expand), index, key, expand)
-        // })
-
-        setExpand({ ...obj, [index]: !expand[index] })
-
-        // setExpand({
-        //     ...expand,
-        //     [index.toString()]: !expand[index.toString()],
-        // })
+        setExpand({ ...initialExpand, [index]: !expand[index] })
     }
 
     return (
-        <Container>
+        <Container
+            onIntersect={() => setExpand(initialExpand)}
+            options={{ threshold: [1] }}
+        >
             <ContainerContent>
                 <FAQTopic>มีข้อสงสัยหรือพบปัญหา</FAQTopic>
                 <FAQThanks>
