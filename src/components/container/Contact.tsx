@@ -1,12 +1,12 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import img_contact from '../../images/contact-section/image/contact-illus.svg'
-import { TextSection, TextSectionA } from '../common/Text'
+import { TextSection } from '../common/Text'
 import R from '../resources/R'
 import Button from '../common/Button'
-import MockIconMail from '../../images/contact-section/icon/email.svg'
-import IconFaceBook from '../../images/contact-section/icon/facebook.svg'
-import IconLine from '../../images/contact-section/icon/line.svg'
+import Email from '../common/Email'
+import { IconFaceBook, IconLine } from '../common/IconSocial'
+import { TextField } from '../common/TextField'
 
 const TextSectionCustom = styled(TextSection)`
     color: ${R.colors.white};
@@ -61,87 +61,10 @@ const FormSubScribe = styled.form`
     margin-top: 0.9rem;
 `
 
-const TextBox = styled.input`
-    font-family: 'Mitr';
-    font-size: 2.4rem;
-    width: 38rem;
-    height: 4.6rem;
-    background: ${R.colors.white};
-    border-radius: 8px;
-    border-width: 0;
-    margin-right: 4.3rem;
-    text-indent: 1.8rem;
-    color: ${R.colors.black_l_40};
-    ::placeholder {
-        color: ${R.colors.black_l_90};
-        margin-left: 1.8rem;
-        line-height: normal;
-    }
-`
-
 const ContainerSocial = styled.div`
     display: flex;
     align-items: center;
     margin-top: 4.3rem;
-`
-
-const WrapEmail = styled.div`
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-`
-
-const MockIconMailCustom = styled(MockIconMail)`
-    ${WrapEmail}:hover & {
-        path {
-            fill: ${R.colors.base_red_l_75};
-        }
-    }
-
-    ${WrapEmail}:active & {
-        path {
-            fill: ${R.colors.base_red_l_60};
-        }
-    }
-`
-
-const TextEmail = styled(TextSectionA)`
-    font-size: 2.4rem;
-    color: ${R.colors.white};
-    font-weight: 400;
-    margin: auto 0 auto 1.6rem;
-    height: 4rem;
-    box-sizing: border-box;
-
-    ${WrapEmail}:hover & {
-        border-bottom: 0.3rem solid ${R.colors.base_red_l_75};
-    }
-    ${WrapEmail}:active & {
-        border-bottom: 0.3rem solid ${R.colors.base_red_l_60};
-    }
-`
-
-const IconSocial = css`
-    cursor: pointer;
-    margin: auto 0 auto 4.3rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 5px solid transparent;
-
-    &:hover {
-        border-color: ${R.colors.base_red_l_75};
-    }
-    &:active {
-        border-color: ${R.colors.base_red_l_60};
-    }
-`
-
-const IconFaceBookCustom = styled(IconFaceBook)`
-    ${IconSocial}
-`
-
-const IconLineCustom = styled(IconLine)`
-    ${IconSocial}
 `
 
 const Contact = () => {
@@ -171,7 +94,7 @@ const Contact = () => {
                     สมัครรับข่าวสารและติดตามการเคลื่อนไหว
                 </TextSubScribe>
                 <FormSubScribe>
-                    <TextBox type="text" placeholder="กรุณาใส่อีเมลของคุณ" />
+                    <TextField type="text" placeholder="กรุณาใส่อีเมลของคุณ" />
                     <Button
                         width={'15.1rem'}
                         height={'4.6rem'}
@@ -185,29 +108,20 @@ const Contact = () => {
                     </Button>
                 </FormSubScribe>
                 <ContainerSocial>
-                    <WrapEmail>
-                        <MockIconMailCustom />
-                        <TextEmail
-                            href="mailto:logigos.official@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            logigos.official@gmail.com
-                        </TextEmail>
-                    </WrapEmail>
+                    <Email />
                     <a
-                        href="line://ti/p/"
+                        href="http://www.facebook.com/Logigos/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <IconFaceBookCustom />
+                        <IconFaceBook />
                     </a>
                     <a
                         href="https://line.me/ti/g2/y1n8wZAhDgGaRhZFP3XEbA"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <IconLineCustom />
+                        <IconLine />
                     </a>
                 </ContainerSocial>
             </ContainerContact>

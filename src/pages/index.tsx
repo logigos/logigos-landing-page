@@ -6,6 +6,7 @@ import Services from '../components/container/Services'
 import Steps from '../components/container/Steps'
 import FAQs from '../components/container/FAQ'
 import Contact from '../components/container/Contact'
+import CallToAction from '../components/container/CallToAction'
 const IndexPage = () => {
     return (
         <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => {
             <Steps />
             <FAQs />
             <Contact />
+            <CallToAction />
         </Layout>
     )
 }
