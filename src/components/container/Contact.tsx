@@ -144,8 +144,6 @@ const IconLineCustom = styled(IconLine)`
     ${IconSocial}
 `
 
-const LinkExternal = styled.a``
-
 const Contact = () => {
     return (
         <Container>
