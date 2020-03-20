@@ -17,11 +17,19 @@ const IconSocial = css`
         border-color: ${R.colors.base_red_l_60};
     }
 `
+interface IconSocialType {
+    width?: string
+    height?: string
+}
 
-export const IconFaceBook = styled(IconFaceBookInLine)`
+export const IconFaceBook = styled(IconFaceBookInLine)<IconSocialType>`
     ${IconSocial}
+    width: ${props => props.width || '6.6rem'};
+    height: ${props => props.height || '6.6rem'};
 `
 
-export const IconLine = styled(IconLineInLine)`
+export const IconLine = styled(IconLineInLine)<IconSocialType>`
     ${IconSocial}
+    width: ${props => props.width || '6.6rem'};
+    height: ${props => props.height || '6.6rem'};
 `

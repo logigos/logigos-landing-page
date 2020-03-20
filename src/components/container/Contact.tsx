@@ -1,16 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import img_contact from '../../images/contact-section/image/contact-illus.svg'
-import { TextSection } from '../common/Text'
+import { TextSectionWhite } from '../common/Text'
 import R from '../resources/R'
 import Button from '../common/Button'
-import Email from '../common/Email'
+import { LineEmail } from '../common/InLineSocial'
 import { IconFaceBook, IconLine } from '../common/IconSocial'
 import { TextField } from '../common/TextField'
 
-const TextSectionCustom = styled(TextSection)`
-    color: ${R.colors.white};
-`
 const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -72,7 +69,7 @@ const Contact = () => {
         <Container>
             <ImageContactLeft src={img_contact} />
             <ContainerContact>
-                <TextSectionCustom>ติดต่อเรา</TextSectionCustom>
+                <TextSectionWhite>ติดต่อเรา</TextSectionWhite>
                 <CardTell>
                     <TextTell>
                         ศูนย์บริการลูกค้า
@@ -108,7 +105,7 @@ const Contact = () => {
                     </Button>
                 </FormSubScribe>
                 <ContainerSocial>
-                    <Email />
+                    <LineEmail />
                     <a
                         href="http://www.facebook.com/Logigos/"
                         target="_blank"

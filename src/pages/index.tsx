@@ -7,6 +7,8 @@ import Steps from '../components/container/Steps'
 import FAQs from '../components/container/FAQ'
 import Contact from '../components/container/Contact'
 import CallToAction from '../components/container/CallToAction'
+import Footer from '../components/container/Footer'
+
 const IndexPage = () => {
     return (
         <Layout>
@@ -17,6 +19,7 @@ const IndexPage = () => {
             <FAQs />
             <Contact />
             <CallToAction />
+            <Footer />
         </Layout>
     )
 }

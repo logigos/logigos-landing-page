@@ -15,6 +15,11 @@ export const TextSection = styled.h1`
     ${TextStyle}
 `
 
+export const TextSectionWhite = styled.h1`
+    ${TextStyle}
+    color: ${R.colors.white};
+`
+
 export const TextSectionA = styled.a`
     ${TextStyle}
     text-decoration: none;
