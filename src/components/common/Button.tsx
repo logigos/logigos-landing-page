@@ -35,6 +35,11 @@ const ButtonRoot = styled.button<Props>`
             props.acolor || props.hcolor || props.color || 'white'};
         border: ${props => props.aborder || null};
     }
+
+    & a {
+        text-decoration: none;
+        color: currentColor;
+    }
 `
 
 interface Props {

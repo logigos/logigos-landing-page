@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import R from '../resources/R'
 
-export const TextSection = styled.h1`
+const TextStyle = css`
     font-family: 'Mitr';
     font-size: 4.8rem;
     font-weight: 500;
@@ -9,4 +9,13 @@ export const TextSection = styled.h1`
     letter-spacing: normal;
     color: ${R.colors.black_l_20};
     margin: 0;
+`
+
+export const TextSection = styled.h1`
+    ${TextStyle}
+`
+
+export const TextSectionA = styled.a`
+    ${TextStyle}
+    text-decoration: none;
 `
