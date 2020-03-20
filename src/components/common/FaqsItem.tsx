@@ -69,8 +69,9 @@ const FaqsItem: FC<FAQType> = ({ Q, A, expand, handleOnClick }) => {
 
 const ContainerItem = styled.div<{ isExpand: boolean }>`
     position: relative;
-    width: 100%;
+    width: 90%;
     /* height: 7rem; */
+    /* min-width: 66.7rem; */
     max-height: 7rem;
     margin: 0.6rem 0;
     overflow: hidden;

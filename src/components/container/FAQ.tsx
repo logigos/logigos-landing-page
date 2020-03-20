@@ -26,7 +26,7 @@ const Container = styled(IntersectionVisible)`
 `
 
 const ContainerContent = styled.div`
-    width: 50%;
+    width: 40%;
     max-width: 48.8rem;
     min-height: 70rem;
     display: flex;
@@ -34,6 +34,7 @@ const ContainerContent = styled.div`
     background: url(${bg_faq_illus});
     background-repeat: no-repeat;
     background-position: top center;
+    margin: 0 7rem;
 `
 
 const FAQTopic = styled.p`
@@ -57,7 +58,7 @@ const ContainerFAQs = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 0 7rem;
+    /* padding: 0 7rem; */
 `
 
 interface FAQType {
