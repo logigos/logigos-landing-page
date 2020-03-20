@@ -9,10 +9,10 @@ import Img_driver_pay from '../../images/step-section/icon/pay.svg'
 import Img_driver_search from '../../images/step-section/icon/search.svg'
 import Img_driver_select from '../../images/step-section/icon/select.svg'
 import R from '../resources/R'
-//import IconPay from '../icons/Pay'
 import StepsSectionLayout from '../common/StepsLayouts'
+
 const Container = styled(ContainerSection)`
-    margin-top: 10.4rem;
+    margin-top: 0;
 `
 
 const TextSectionCustom = styled(TextSection)`
