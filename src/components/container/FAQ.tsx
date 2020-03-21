@@ -23,10 +23,17 @@ const Container = styled(IntersectionVisible)`
     justify-content: center;
     width: 100%;
     margin-top: 7.6rem;
+    height: 76rem;
+`
+
+const WrapLeft = styled.div`
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const ContainerContent = styled.div`
-    width: 40%;
     max-width: 48.8rem;
     min-height: 70rem;
     display: flex;
@@ -34,6 +41,7 @@ const ContainerContent = styled.div`
     background: url(${bg_faq_illus});
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: 100%;
     margin: 0 7rem;
 `
 
@@ -131,15 +139,17 @@ const FAQ = () => {
             onIntersect={() => setExpand(initialExpand)}
             options={{ threshold: [0.75] }}
         >
-            <ContainerContent>
-                <FAQTopic>มีข้อสงสัยหรือพบปัญหา</FAQTopic>
-                <FAQThanks>
-                    ทีมงาน Logigos พร้อมบริการด้วยหัวใจ <br />
-                    ดูแลทุกท่านด้วยความอบอุ่น <br />
-                    สอบถามการใช้งานได้ทุกเมื่อ
-                </FAQThanks>
-                <IconArrowDownRedCustom />
-            </ContainerContent>
+            <WrapLeft>
+                <ContainerContent>
+                    <FAQTopic>มีข้อสงสัยหรือพบปัญหา</FAQTopic>
+                    <FAQThanks>
+                        ทีมงาน Logigos พร้อมบริการด้วยหัวใจ <br />
+                        ดูแลทุกท่านด้วยความอบอุ่น <br />
+                        สอบถามการใช้งานได้ทุกเมื่อ
+                    </FAQThanks>
+                    <IconArrowDownRedCustom />
+                </ContainerContent>
+            </WrapLeft>
             <ContainerFAQs>
                 <TextSectionCustom>คำถามที่พบบ่อย</TextSectionCustom>
                 {FAQs.faqs.map((faq, index) => {
@@ -158,6 +168,5 @@ const FAQ = () => {
         </Container>
     )
 }
-
 export default FAQ
 //

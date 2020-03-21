@@ -29,22 +29,42 @@ const IconArrowBlueCustom = styled(IconArrowBlue)`
             : null};
 `
 
-const QText = styled.p`
+const QText = styled.p<{ expand?: string }>`
     font-family: 'Mitr';
-    height: 3.8rem;
+
     font-size: 2.4rem;
     color: ${R.colors.black_l_40};
     margin: 1.6rem 0 1rem 0;
+    /* width: 46.2rem; */
+    width: 84%;
+    height: ${props => (props.expand === 'true' ? 'auto' : '3.8rem')};
+    text-overflow: ${props =>
+        props.expand === 'true' ? 'initial' : 'ellipsis'};
+    overflow: ${props => (props.expand === 'true' ? 'visible' : 'hidden')};
+    white-space: ${props => (props.expand === 'true' ? 'wrap' : 'nowrap')};
 `
 
-const AText = styled.p`
+const AText = styled.p<{ expand?: string }>`
     width: 55.7rem;
-    max-height: 10.9rem;
+    /* max-height: 10.9rem; */
     font-family: 'Mitr';
     font-size: 2.4rem;
+    width: 84%;
     color: ${R.colors.black_l_60};
     /* line-height: 1.8em; */
     margin: 0 0 1.9rem 0;
+    /* overflow-y: ${props => (props.expand === 'true' ? 'scroll' : 'visible')};
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
+    } */
 `
 export interface FAQType {
     Q: string
@@ -61,8 +81,8 @@ const FaqsItem: FC<FAQType> = ({ Q, A, expand, handleOnClick }) => {
             ) : (
                 <IconArrowBlueCustom expand={expand.toString()} />
             )}
-            <QText>{Q}</QText>
-            <AText>{A}</AText>
+            <QText expand={expand.toString()}>{Q}</QText>
+            <AText expand={expand.toString()}>{A}</AText>
         </ContainerItem>
     )
 }
@@ -84,7 +104,7 @@ const ContainerItem = styled.div<{ isExpand: boolean }>`
     ${props =>
         props.isExpand
             ? css`
-                  max-height: 19.2rem;
+                  max-height: 19rem;
               `
             : css`
                   max-height: 7rem;
