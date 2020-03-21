@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepItem renders correctly 1`] = `
+<div
+  className="sc-AxirZ sc-AxiKw sc-Axmtr caIeeO"
+>
+  <test-file-stub />
+  <p
+    className="sc-fzozJi gLGUah"
+  >
+    test_name
+  </p>
+  <p
+    className="sc-fzoLsD kGRssa"
+  >
+    test_detail
+  </p>
+</div>
+`;

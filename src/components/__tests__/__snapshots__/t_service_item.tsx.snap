@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceItem renders correctly 1`] = `
+<div
+  className="sc-AxjAm sc-AxhUy sc-AxgMl sc-Axmtr fAqYOc"
+>
+  <img
+    className="sc-AxmLO fwvVin"
+    name="test_name"
+    src="test-file-stub"
+  />
+  <p
+    className="sc-fzozJi bcXsGH"
+  >
+    test_name
+  </p>
+  <p
+    className="sc-fzoLsD dGGtn"
+  >
+    test_detail
+  </p>
+</div>
+`;

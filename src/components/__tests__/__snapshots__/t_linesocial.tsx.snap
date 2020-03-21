@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineSocial LineEmail | renders correctly 1`] = `
+<div
+  className="sc-AxhCb dhpJBI"
+>
+  <test-file-stub
+    className="sc-AxhUy bTNPmY"
+    height="4rem"
+    width="4rem"
+  />
+  <a
+    className="sc-AxiKw sc-AxheI iEaKEL"
+    href="mailto:logigos.official@gmail.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    logigos.official@gmail.com
+  </a>
+</div>
+`;
+
+exports[`LineSocial LineTell | renders correctly 1`] = `
+<div
+  className="sc-AxhCb dhpJBI"
+>
+  <test-file-stub
+    className="sc-AxgMl jhutUO"
+  />
+  <a
+    className="sc-AxiKw sc-AxheI iEaKEL"
+    href="tel:0873370808"
+  >
+    00 000 0000
+  </a>
+</div>
+`;

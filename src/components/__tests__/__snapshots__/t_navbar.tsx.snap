@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<nav
+  className="sc-AxirZ iFWzZN"
+>
+  <button
+    className="sc-AxjAm gvAePj"
+    height="4.7rem"
+    width="15rem"
+  >
+    เข้าสู่ระบบ
+  </button>
+  <button
+    className="sc-AxjAm esTlVd"
+    height="4.7rem"
+    width="18rem"
+  >
+    สมัครสมาชิก
+  </button>
+</nav>
+`;

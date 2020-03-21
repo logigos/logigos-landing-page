@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepItem Icon Facebook | renders correctly 1`] = `
+<test-file-stub
+  className="sc-AxjAm gmLekj"
+/>
+`;
+
+exports[`StepItem Icon Line | renders correctly 1`] = `
+<test-file-stub
+  className="sc-AxirZ eZxkIU"
+/>
+`;
