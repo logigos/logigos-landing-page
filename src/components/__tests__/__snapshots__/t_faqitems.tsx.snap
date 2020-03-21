@@ -2,19 +2,19 @@
 
 exports[`FAQItem (EXPAND) renders correctly 1`] = `
 <div
-  className="sc-AxhUy kDUTqn"
+  className="sc-AxhUy eKGhvn"
   onClick={[Function]}
 >
   <test-file-stub
     className="sc-AxjAm jnIgPP"
   />
   <p
-    className="sc-AxiKw cPVhdG"
+    className="sc-AxiKw lfFHDL"
   >
     Question
   </p>
   <p
-    className="sc-AxhCb fMRQhU"
+    className="sc-AxhCb gBEShw"
   >
     Anwser
   </p>
@@ -30,12 +30,12 @@ exports[`FAQItem (NOT EXPAND) renders correctly 1`] = `
     className="sc-AxirZ urQxH"
   />
   <p
-    className="sc-AxiKw cPVhdG"
+    className="sc-AxiKw exFDCh"
   >
     Question
   </p>
   <p
-    className="sc-AxhCb fMRQhU"
+    className="sc-AxhCb elSiqH"
   >
     Anwser
   </p>
