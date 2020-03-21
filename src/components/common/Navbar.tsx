@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import R from '../resources/R'
+import media from 'styled-media-query'
 
 const NavRoot = styled.nav`
     display: flex;
@@ -13,10 +14,18 @@ const NavRoot = styled.nav`
     z-index: 1;
 `
 
+const ButtonCustom = styled(Button)`
+    ${media.lessThan('small')`
+        font-size: 1.4rem;
+        width: 5.7rem;
+        height: 2.2rem;
+    `}
+`
+
 const Navbar = () => {
     return (
         <NavRoot>
-            <Button
+            <ButtonCustom
                 bg="transparent"
                 hbg={R.colors.black_l_60}
                 abg={R.colors.black_l_90}
@@ -26,8 +35,8 @@ const Navbar = () => {
                 margin="auto 1.2rem"
             >
                 เข้าสู่ระบบ
-            </Button>
-            <Button
+            </ButtonCustom>
+            <ButtonCustom
                 bg="transparent"
                 hbg="white"
                 abg={R.colors.black_l_90}
@@ -40,7 +49,7 @@ const Navbar = () => {
                 margin="auto 1.2rem"
             >
                 สมัครสมาชิก
-            </Button>
+            </ButtonCustom>
         </NavRoot>
     )
 }
