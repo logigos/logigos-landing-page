@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, MouseEvent } from 'react'
 import styled from 'styled-components'
 import R from '../resources/R'
 import bg_faq_illus from '../../images/faq-section/image/faq-illus.svg'
@@ -130,7 +130,11 @@ const FAQ = () => {
     // const [expand, setExpand] = useState<Array<boolean>>([false,false,false,false,false])
     const [expand, setExpand] = useState<Props>(initialExpand)
 
-    const handleOnClick = async (index: string) => {
+    const handleOnClick = async (
+        e: MouseEvent<HTMLDivElement>,
+        index: string
+    ) => {
+        e.preventDefault()
         setExpand({ ...initialExpand, [index]: !expand[index] })
     }
 
@@ -157,9 +161,8 @@ const FAQ = () => {
                         <FAQItem
                             key={index}
                             expand={expand[index.toString()]}
-                            handleOnClick={() =>
-                                handleOnClick(index.toString())
-                            }
+                            index={index.toString()}
+                            handleOnClick={handleOnClick}
                             {...faq}
                         />
                     )

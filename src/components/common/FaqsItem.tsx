@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, MouseEvent } from 'react'
 import styled, { css } from 'styled-components'
 import R from '../resources/R'
 import IconArrowBlue from '../../images/faq-section/icon/arrow-down-blue.svg'
@@ -70,12 +70,13 @@ export interface FAQType {
     Q: string
     A: string
     expand: boolean
-    handleOnClick: () => void
+    index: string
+    handleOnClick: (e: MouseEvent<HTMLDivElement>, index: string) => void
 }
 
-const FaqsItem: FC<FAQType> = ({ Q, A, expand, handleOnClick }) => {
+const FaqsItem: FC<FAQType> = ({ Q, A, expand, handleOnClick, index }) => {
     return (
-        <ContainerItem onClick={() => handleOnClick()} isExpand={expand}>
+        <ContainerItem onClick={e => handleOnClick(e, index)} isExpand={expand}>
             {expand ? (
                 <IconArrowRedCustom expand={expand.toString()} />
             ) : (
