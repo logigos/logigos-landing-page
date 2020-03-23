@@ -9,6 +9,7 @@ pipelines:
                       - node
                   script:
                       - npm install
+                      - jest --updateSnapshot
                       - npm test
 
         master:
@@ -20,6 +21,7 @@ pipelines:
                       - npm install -g gatsby-cli
                       - npm install
                       - npm test
+                      - jest --updateSnapshot
                       - (umask  077 ; echo $ENV_PROD | base64 --decode > .env.production)
                       - gatsby build
                       - rm -rf .env.production
