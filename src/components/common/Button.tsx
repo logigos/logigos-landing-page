@@ -60,6 +60,7 @@ interface Props {
     border?: string
     aborder?: string
     hborder?: string
+    onClick?: () => void
 }
 
 const Button: FC<Props> = ({ children, ...props }) => {

@@ -14,6 +14,8 @@ const colors = {
     white_75: 'hsla(0, 0%, 100%, 0.75)',
     white_92: 'hsl(0, 0%, 92%)',
     white: 'hsl(0, 0%, 100%)',
+    green_L_65: 'hsl(116, 17%, 65%)',
+    green_l_95: 'hsl(116, 17%, 70%)',
     // base_red: ''hsl(10, 44%, 65%)',
     // base_blue: ''hsl(225, 16%, 39%)',
 
