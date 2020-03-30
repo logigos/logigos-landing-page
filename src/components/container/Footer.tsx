@@ -13,7 +13,7 @@ const ContainerFooter = styled.footer`
     display: flex;
     justify-content: center;
     background: ${R.colors.black_l_40};
-    width: 100vw;
+    width: 100%;
     height: 44.2rem;
 `
 
